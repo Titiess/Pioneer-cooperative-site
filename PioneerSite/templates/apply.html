@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Apply Online • Pioneer Cooperative{% endblock %}
+
+{% block content %}
+<section class="section section-gradient">
+    <div class="container">
+        <h1>Apply for a Loan</h1>
+        <p class="intro-text">Complete the application below. The documentation/legal fee of ₦5,000 is payable within the process.</p>
+        
+        <form method="POST" action="{{ url_for('apply') }}" class="application-form">
+            <h2>Personal Information</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="first_name">First Name <span class="required">*</span></label>
+                    <input type="text" id="first_name" name="first_name" required value="{{ form_data.get('first_name', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name <span class="required">*</span></label>
+                    <input type="text" id="last_name" name="last_name" required value="{{ form_data.get('last_name', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" name="dob" required value="{{ form_data.get('dob', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required value="{{ form_data.get('phone', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required value="{{ form_data.get('email', '') }}">
+                </div>
+            </div>
+
+            <h2>Security</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="academic_qualification">Academic Qualification</label>
+                    <input type="text" id="academic_qualification" name="academic_qualification" value="{{ form_data.get('academic_qualification', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="service_documents">Service Documents</label>
+                    <input type="text" id="service_documents" name="service_documents" value="{{ form_data.get('service_documents', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="guarantor_name">Guarantor's Name</label>
+                    <input type="text" id="guarantor_name" name="guarantor_name" value="{{ form_data.get('guarantor_name', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="guarantor_occupation">Guarantor's Occupation</label>
+                    <input type="text" id="guarantor_occupation" name="guarantor_occupation" value="{{ form_data.get('guarantor_occupation', '') }}">
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="consent" value="yes" {% if form_data.get('consent') %}checked{% endif %}>
+                    I confirm that the information provided is accurate and I agree to be contacted.
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

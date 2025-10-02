@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Home • Pioneer Cooperative{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Quick, Reliable Microfinance for Your Needs</h1>
+        <p class="hero-subtitle">Transparent rates. Fast decisions. Human support.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('apply') }}" class="btn btn-primary">Apply Now</a>
+            <a href="{{ url_for('requirements') }}" class="btn btn-outline">View Requirements</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

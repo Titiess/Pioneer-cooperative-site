@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Loan Products • Pioneer Cooperative{% endblock %}
+
+{% block content %}
+<section class="section section-gradient">
+    <div class="container">
+        <h1>Loan Products</h1>
+        <p class="intro-text">Browse our range of microfinance loan products designed to support your personal and business financial needs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid-3">
+            <div class="card">
+                <h3>Business Loans</h3>
+                <p>Expand your business with flexible options and competitive rates.</p>
+            </div>
+            <div class="card">
+                <h3>Personal Loans</h3>
+                <p>Meet your individual goals with tailored lending solutions.</p>
+            </div>
+            <div class="card">
+                <h3>Agriculture Loans</h3>
+                <p>Invest in farming activities with products designed for the sector.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-gradient">
+    <div class="container">
+        <div class="callout">
+            <h2>Get Started</h2>
+            <p>Ready to apply for a loan? Start your application today.</p>
+            <a href="{{ url_for('apply') }}" class="btn btn-primary">Apply Online</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

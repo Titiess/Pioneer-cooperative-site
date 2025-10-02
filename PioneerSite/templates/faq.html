@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ • Pioneer Cooperative{% endblock %}
+
+{% block content %}
+<section class="section section-gradient">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>What is a microfinance loan?</summary>
+                <p>Microfinance loans offer small amounts to support individuals and SMEs with limited access to traditional banking.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Who is eligible to apply?</summary>
+                <p>Nigerian residents with valid identification; other criteria may apply based on loan product.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How quickly can I access funds?</summary>
+                <p>Approvals can be fast when documentation is complete—often within a few business days.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What types of security are accepted?</summary>
+                <p>Credentials, service documents, post-dated cheques, and a public servant guarantor (as specified in our requirements).</p>
+            </details>
+        </div>
+
+        <div class="callout">
+            <h2>Have Other Questions?</h2>
+            <p>We're here to help. Get in touch with us today.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
